@@ -3,14 +3,47 @@
 * {
   box-sizing: border-box;
 }
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+/* Цей клас застосовує різні CSS властивості для забезпечення приховання елемента від візуального відображення:
+
+position: absolute; розміщує елемент у точці, яку вибираєте, аби його не вплинуло на розташування інших елементів.
+width: 1px; та height: 1px; встановлюють розмір елемента як дуже малий, щоб його не було видно.
+margin: -1px; забезпечує виправлення помилкового маргіну, що виникає з малих розмірів.
+padding: 0; встановлює нульове внутрішнє заповнення, щоб уникнути зайвих просторів.
+overflow: hidden; приховує будь-яке переповнення контенту, якщо таке виникає.
+clip: rect(0, 0, 0, 0); обрізає елемент до області з нульовою висотою та шириною, щоб він був повністю невидимим.
+white-space: nowrap; забезпечує непереносимість контенту на новий рядок, щоб зайняти мінімальний простір.
+border: 0; встановлює нульову рамку, щоб уникнути додаткових просторів, які можуть бути пов'язані з рамкою. */
+
 body {
   font-family: Roboto, sans-serif;
-  color: #434455;
-  background-color: #ffffff;
+  color: var(--slat-color);
+  background-color: var(--white-color);
 }
 :root {
-  --accept-color: #434455;
+  --slat-color: #434455;
   --transition-duration-and-funk: 500ms linear; /* Змінна часу анімації */
+  --ocean-color: #404bbf;
+	--iris-color: #4d5ae5;
+	--cloud-color: #f4f4fd;
+	--white-color: #ffffff;
+	--navy-blue-color: #2e2f42;
+	--conflower-color: #e7e9fc;
+	--light-slate-color: #8e8f99;
+  --dairy-color: #FCFCFC;
+  --green-color: #31D0AA;
 }
 img {
   display: block;
@@ -50,7 +83,6 @@ button {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
   border-bottom: 1px solid #e7e9fc;
   height: 72px;
-  /* background-color: coral; */
   padding: 24px 156px 24px 156px;
 }
 .nav-header {
@@ -67,17 +99,17 @@ button {
   line-height: 1.17; /* для визначення простору між рядками */
   letter-spacing: 0.03em; /* для визначення відступів між літерами */
   text-transform: uppercase;
-  color: #4d5ae5;
+  color: var(--iris-color);
 }
 .link {
   text-decoration: none;
 }
 
 .logo-dark {
-  color: #2e2f42;
+  color: var(--navy-blue-color);
 }
 .logo-light {
-  color: #f4f4fd;
+  color: var(--cloud-color);
 }
 .list {
   list-style: none;
@@ -87,7 +119,6 @@ button {
   gap: 40px; /* для визначення відступів між пунктами меню */
   display: flex;
   justify-content: flex-start;
-  /*   padding-right: 332px; */
   padding-left: 0;
 }
 
@@ -98,14 +129,13 @@ button {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  /* letter-spacing: 0.02em; */
-  color: #2e2f42;
+  color: var(--navy-blue-color);
   line-height: 1.5; /* для визначення простору між рядками */
   letter-spacing: 0.02em; /* визначення відступів між літерами */
 }
 .current {
   position: relative;
-  color: #404bbf;
+  color: var(--ocean-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* для плавної зміни кольору текстового контенту */
 }
 .current::after {
@@ -114,18 +144,18 @@ button {
   left: 0;
   bottom: -1px;
   height: 4px;
-  background-color: #404bbf;
+  background-color: var(--ocean-color);
   border-radius: 2px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* для плавної зміни кольору текстового контенту */
 }
 
 .meny-link:hover,
 .meny-link:focus {
-  color: #404bbf;
+  color: var(--ocean-color);
 }
 .address-item link:hover,
 .address-item link:focus {
-  color: #404bbf;
+  color: var(--ocean-color);
 }
 .address {
   margin-left: auto;
@@ -146,7 +176,7 @@ button {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.02em; /* визначення відступів між літерами */
-  color: #434455;
+  color: var(--slat-color);
   margin: 0;
   padding: 0;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* для плавної зміни кольору текстового контенту */
@@ -154,11 +184,15 @@ button {
 
 .address-link:hover,
 .address-link:focus {
-  color: #404bbf;
+  color: var(--ocean-color);
 }
+
+
+
+/* ////////////////////hero////////////////////// */
 .hero {
   padding: 188px 0;
-  background-color: #2e2f42;
+  background-color: var(--navy-blue-color);
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -190,7 +224,7 @@ button {
   text-align: center;
   line-height: 1.07;
   letter-spacing: 0.02em;
-  color: #ffffff;
+  color: var(--white-color);
   max-width: 496px;
   margin-bottom: 48px;
 }
@@ -203,7 +237,7 @@ button {
   height: 56px;
   /*   left: 636px;
   top: 428px; */
-  background: #4d5ae5;
+  background: var(--iris-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer; /* для визначення стилю курсору */
@@ -213,18 +247,21 @@ button {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  color: #ffffff;
+  color: var(--white-color);
   align-items: center;
   letter-spacing: 0.04em;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-btn:hover,
 .hero-btn:focus {
-  background-color: #404bbf;
+  background-color: var(--ocean-color);
 }
+
+
+
+/* /////////////////////advantages/////////////////////// */
 .advantages {
   padding: 120px 0;
-  /* background-color: gold; */
 }
 
 .advantages-list {
@@ -236,7 +273,7 @@ button {
 .advantages-item-bg {
   display: block; /* Без цього не буде працювати ширина і висота  */
   height: 112px; /* Щоб він був розтягнутий на 100% ширини батьківського, прибрати фіксовану ширину. Завдяки display: block, він займе всю ширину.  */
-  background-color: #f4f4fd;
+  background-color: var(--cloud-color);
   padding: 24px 0 24px 0;
   margin-bottom: 8px;
   display: flex; /* Вирівнювання icon-advantages завдяки flex-box  */
@@ -265,7 +302,7 @@ button {
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
-  color: #2e2f42;
+  color: var(--navy-blue-color);
   letter-spacing: 0.02em;
 }
 
@@ -278,20 +315,19 @@ button {
   letter-spacing: 0.02em;
 }
 
+
+/* //////////////////////WE DOING/////////////// */
 .we-doing {
-  /*  background-color: goldenrod; */
-  /*  display: flex; */
   padding-bottom: 120px;
 }
 .doing-title {
   margin-bottom: 72px;
-  /*  padding-bottom: 72px; */
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
   line-height: 40px;
-  color: #2e2f42;
+  color: var(--navy-blue-color);
   text-align: center;
   letter-spacing: 0.02em;
   line-height: 1.11;
@@ -306,20 +342,19 @@ button {
   width: calc((100% - 2 * 24px) / 3);
 }
 
+/* ////////////////// TEAM ///////// */
+
 .team-title {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
   line-height: 40px;
-  color: #2e2f42;
+  color: var(--navy-blue-color);
   text-align: center;
   text-transform: capitalize; /* для визначення стилю написання тексту */
   letter-spacing: 0.02em;
   line-height: 1.11;
-}
-.footer-text {
-  color: #f4f4fd;
 }
 
 .team-subtitle {
@@ -329,13 +364,12 @@ button {
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.02em;
-  color: #2e2f42;
+  color: var(--navy-blue-color);
 }
 
 .our-team {
   padding: 120px 0;
-  background-color: #f4f4fd;
-  /* background-color: darkgoldenrod; */
+  background-color: var(--cloud-color);
 }
 .team-title {
   margin-bottom: 72px;
@@ -352,7 +386,7 @@ button {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
   width: calc((100% - 3 * 24px) / 4);
-  background-color: #ffffff;
+  background-color: var(--white-color);
   /*   width: 264px;
   height: 380px;  якщо вказати висоту, то не буде працювати    width: calc((100% - 3 * 24px) / 4); */
   border-radius: 0px 0px 4px 4px; /* для визначення заокруглень внизу блока
@@ -384,7 +418,7 @@ button {
   line-height: 24px;
   text-align: center;
   letter-spacing: 0.02em;
-  color: #434455;
+  color: var(--slat-color);
 }
 
 .social-list {
@@ -398,7 +432,7 @@ button {
   display: flex;
   height: 100%;
   width: 100%; /* що встановлює ширину елемента на 100% ширини батьківського контейнера */
-  background-color: #4d5ae5;
+  background-color: var(--iris-color);
   border-radius: 50%;
   align-items: center;
   justify-content: center;
@@ -406,14 +440,14 @@ button {
 }
 .social-list-link:hover,
 .social-list-link:focus {
-  background-color: #404bbf;
+  background-color: var(--ocean-color);
 }
 
 .social-list-link .social-list-icon {
   margin: 12px;
-  fill: #f4f4fd;
+  fill: var(--cloud-color);
 }
-
+/* //////////////    CUSTUMERS   ///////////// */
 .customers {
   padding: 120px 0;
 }
@@ -425,7 +459,7 @@ button {
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
-  color: #2e2f42;
+  color: var(--navy-blue-color);
   margin-bottom: 72px;
   line-height: 1.1; /* для визначення простору між рядками */
 }
@@ -456,20 +490,24 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  fill: #8e8f99;
-  color: #8e8f99;
+  fill: var(--light-slate-color);
+  color: var(--light-slate-color);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* для плавної зміни кольору рамки елемента та для плавної зміни кольору іконки */
 }
 .customers-list-link:hover,
 .customers-list-link:focus {
-  border-color: #404bbf;
-  color: #404bbf;
+  border-color: var(--ocean-color);
+  color: var(--ocean-color);
   fill: currentColor; /*  для задання значення кольору svg?, що спадає з батьківського елементу (для цього потрібно прибрати властивість fill у спрайті для іконки) */
 }
 
+
+
+/* ////////////////  FOOTER   ///////////////// */
+
 .footer {
-  background-color: #2e2f42;
+  background-color: var(--navy-blue-color);
   padding-top: 100px;
   padding-bottom: 100px;
 }
@@ -482,10 +520,12 @@ button {
   margin-right: 120px;
 }
 .logo-footer {
-  color: #4d5ae5;
+  color: var(--iris-color);
   display: inline-block;
   margin-bottom: 16px;
 }
+
+
 .footer-text {
   font-family: "Roboto";
   font-style: normal;
@@ -494,10 +534,10 @@ button {
   line-height: 24px;
   letter-spacing: 0.02em;
   width: 264px;
+  color: var(--cloud-color);
 }
 
-/* .social-media{
-} */
+
 .social-media-text {
   font-family: "Roboto";
   font-style: normal;
@@ -505,7 +545,7 @@ button {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.02em;
-  color: #ffffff;
+  color: var(--white-color);
   margin-bottom: 16px;
 }
 .social-list-footer {
@@ -519,7 +559,7 @@ button {
 
 .footer-social-list-link:hover,
 .footer-social-list-link:focus {
-  background-color: #31d0aa;
+  background-color: var(--green-color);
 }
 
 .media-list {
@@ -545,11 +585,11 @@ button {
   padding: 12px 24px;
   /*   width: 116px; Не потрібно, тому що тут є padding: 12px 24px;  */
   height: 48px;
-  background: #f4f4fd;
+  background: var(--cloud-color);
   border: 1px solid #e7e9fc;
   border-radius: 4px;
   font-family: "Roboto", sans-serif;
-  color: #4d5ae5;
+  color: var(--iris-color);
   align-items: center;
   text-align: center;
   font-style: normal;
@@ -561,8 +601,8 @@ button {
 }
 .btn-portfolio:hover,
 .btn-portfolio:focus {
-  color: #ffffff;
-  background-color: #404bbf;
+  color: var(--white-color);
+  background-color: var(--ocean-color);
   border: 1px solid transparent; /* для вимкнення кольору при ховері */
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12); /* для визначення тіні для елемента при наведені мишкою */
@@ -579,14 +619,12 @@ button {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.02em;
-  color: #434455;
+  color: var(--slat-color);
   line-height: 1.5;
 }
 .btn-portfolio-list {
   display: flex;
   gap: 24px;
-  /*   padding-bottom: 72px;
-  margin: 0; */
   margin-bottom: 72px;
   justify-content: center;
   padding: 0;
@@ -643,13 +681,13 @@ button {
 
 .overlay {
   display: block;
-  background-color: #4d5ae5;
+  background-color: var(--iris-color);
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.02em;
-  color: #f4f4fd;
+  color: var(--cloud-color);
   padding: 40px 32px 0 32px;
   padding: 40px 32px;
   position: absolute; /* чепляється до найближчого батьківського relative */
@@ -677,6 +715,11 @@ button {
   transform: translateY(0%);
 }
 
+
+
+
+
+
 /* /////////////////////////////////////////      MODAL-WINDOW        //////////////////////// */
 .back-drop {
   position: fixed; /* вирізається зі сторінки, позиціонується від вью порта */
@@ -699,9 +742,10 @@ button {
 }
 
 .modal {
+  padding: 72px 24px 24px 24px;
   min-height: 576px; /*  для визначення мінімальної висоти елемента на веб-сторінці */
   width: 408px;
-  background: #fcfcfc;
+  background: var(--dairy-color);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -721,7 +765,7 @@ button {
   width: 24px;
   height: 24px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  background: #e7e9fc;
+  background: var(--conflower-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%; /* Робимо круглі края */
   display: flex;
@@ -737,16 +781,156 @@ button {
 
 .modal-close-btn:hover,
 .modal-close-btn:focus {
-  background-color: #404bbf;
+  background-color: var(--ocean-color);
   border: none;
 }
 
 .cross-icon {
-  fill: #2e2f42;
+  fill: var(--navy-blue-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); /*  для плавної зміни кольору */
 }
 
 .modal-close-btn:hover .cross-icon,
 .modal-close-btn:focus .cross-icon {
-  fill: #ffffff;
+  fill: var(--white-color);
 } /*Зміна кольору іконки при наведенні на кнопку */
+
+/* /////////////////form/////////////// */
+.subtitle-form{
+text-align: center;
+letter-spacing: 0.02em;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+color: var(--navy-blue-color);
+margin-bottom: 16px;
+}
+
+.contact-form-wrapper{
+  margin-bottom: 8px;
+}
+
+.contact-form-field-wrapper{
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color:var(--light-slate-color);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.contact-form-wrapper-for-input{
+  position: relative;
+}
+
+.contact-form-input{
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  background-color: transparent;/*  задає прозорий колір фону для елемента  */
+  padding-left: 38px;
+  outline: transparent;/*  задає прозорий колір для контуру елемента */
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* для плавної зміни кольору рамки */
+}
+
+.contact-form-input:focus{
+  border-color: #4D5AE5;
+}
+
+.contact-form-icon{
+  position: absolute;
+  left: 16px;/* для встановлення відстані між лівим краєм елемента і лівим краєм його батьківського елемента (contact-form-wrapper-for-input, nfr zr e ymjuj   position: relative; ) */
+  top: 50%; /* для зміщення елемента до верхньої межі контейнера */
+  transform: translateY(-50%); /* для центрування елемента по вертикалі */
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);/*  дозволяє задавати анімаційний ефект для зміни значень властивостей стилю */
+}
+
+
+
+/* Кажемо що при фокусі на input, У його сусіда svg(.contact-form-icon)змінюється кольор   */
+.contact-form-input:focus + .contact-form-icon{
+  fill: #4D5AE5; /* для зміни кольору іконки при кліку на input (для цього потрібно прибрати властивість fill у спрайті для іконки) */
+}
+
+.contact-form-wrapper-comment{
+  margin-bottom: 16px
+}
+
+.contact-form-comment{
+  width: 100%; /* що встановлює ширину елемента, яка займає повну ширину його батьківського елемента */
+  height: 120px;
+  font-size: 12px; 
+  line-height: 1.17;
+  letter-spacing: 0.04em; 
+  color: rgba(46, 47, 66, 0.4); /* для визначення кольору тексту */
+  border: 1px solid rgba(46, 47, 66, 0.2); /* дозволяє задати стиль, ширину та колір межі навколо елемента */
+  border-radius: 4px;
+  background-color: transparent; /* що встановлює колір фону елемента */
+  padding: 8px 16px;
+  outline: transparent; /* для встановлення стилю контуру для елемента */
+  resize: none;/*  для заборони зміни розміру елемента */
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* що дозволяє задавати анімаційний ефект для зміни значень властивостей стилю */
+}
+.contact-form-comment::placeholder {
+	color: rgba(46, 47, 66, 0.4);
+}
+
+.contact-form-comment:focus{
+  border-color: #4D5AE5;
+}
+.contact-form-wrapper-checkbox{
+  margin-bottom: 24px;
+}
+
+.contact-form-label-checkbox{
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--light-slate-color);
+}
+
+.contact-form-own-checkbox{
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex; 
+  align-items: center;
+  justify-content: center; 
+  fill: transparent;
+}
+
+.contact-form-chackbox-input:checked + .contact-form-label-checkbox .contact-form-own-checkbox{
+  background-color: var(--ocean-color);
+  border: none;
+  fill: var(--white-color);
+}
+.link-privacy{
+  font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+letter-spacing: 0.04em;
+text-decoration-line: underline;
+color: var(--iris-color);
+}
+
+.modal-button-send{
+min-width: 169px;
+height: 56px;
+background: #4D5AE5;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+border-radius: 4px;
+color: #ffffff;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+align-items: center;
+text-align: center;
+letter-spacing: 0.04em;
+cursor: pointer;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+display: block;
+margin: 0 auto;
+}
