@@ -5,16 +5,16 @@
 }
 
 .visually-hidden {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	border: 0;
-	padding: 0;
-	white-space: nowrap;
-	clip-path: inset(100%);
-	clip: rect(0 0 0 0);
-	overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 /* Цей клас застосовує різні CSS властивості для забезпечення приховання елемента від візуального відображення:
 
@@ -36,14 +36,14 @@ body {
   --slat-color: #434455;
   --transition-duration-and-funk: 500ms linear; /* Змінна часу анімації */
   --ocean-color: #404bbf;
-	--iris-color: #4d5ae5;
-	--cloud-color: #f4f4fd;
-	--white-color: #ffffff;
-	--navy-blue-color: #2e2f42;
-	--conflower-color: #e7e9fc;
-	--light-slate-color: #8e8f99;
-  --dairy-color: #FCFCFC;
-  --green-color: #31D0AA;
+  --iris-color: #4d5ae5;
+  --cloud-color: #f4f4fd;
+  --white-color: #ffffff;
+  --navy-blue-color: #2e2f42;
+  --conflower-color: #e7e9fc;
+  --light-slate-color: #8e8f99;
+  --dairy-color: #fcfcfc;
+  --green-color: #31d0aa;
 }
 img {
   display: block;
@@ -187,8 +187,6 @@ button {
   color: var(--ocean-color);
 }
 
-
-
 /* ////////////////////hero////////////////////// */
 .hero {
   padding: 188px 0;
@@ -257,8 +255,6 @@ button {
   background-color: var(--ocean-color);
 }
 
-
-
 /* /////////////////////advantages/////////////////////// */
 .advantages {
   padding: 120px 0;
@@ -314,7 +310,6 @@ button {
   line-height: 24px;
   letter-spacing: 0.02em;
 }
-
 
 /* //////////////////////WE DOING/////////////// */
 .we-doing {
@@ -502,8 +497,6 @@ button {
   fill: currentColor; /*  для задання значення кольору svg?, що спадає з батьківського елементу (для цього потрібно прибрати властивість fill у спрайті для іконки) */
 }
 
-
-
 /* ////////////////  FOOTER   ///////////////// */
 
 .footer {
@@ -525,7 +518,6 @@ button {
   margin-bottom: 16px;
 }
 
-
 .footer-text {
   font-family: "Roboto";
   font-style: normal;
@@ -536,7 +528,6 @@ button {
   width: 264px;
   color: var(--cloud-color);
 }
-
 
 .social-media-text {
   font-family: "Roboto";
@@ -563,72 +554,66 @@ button {
 }
 
 .media-list {
-  gap: 16px;/* для визначення відступів між елементами форми */
+  gap: 16px; /* для визначення відступів між елементами форми */
 }
 
-.footer-form-wrapper{
+.footer-form-wrapper {
   margin-left: 80px;
 }
 
-.footer-form{
-  display: flex;/*  для розміщення елементів форми по горизонталі в рядок */
+.footer-form {
+  display: flex; /*  для розміщення елементів форми по горизонталі в рядок */
 }
-.footer-form-field-wrapper-subscribe{
+.footer-form {
   gap: 24px; /* для визначення відступів між елементами форми */
 }
 
-.footer-form-subscribe-input{
+.footer-form-subscribe-input {
   width: 264px;
   height: 40px;
-  border: 1px solid #ffffff;/*  що дозволяє задати стиль, ширину та колір межі навколо елемента */
-  background-color: transparent;/*  для визначення кольору фону */
+  border: 1px solid #ffffff; /*  що дозволяє задати стиль, ширину та колір межі навколо елемента */
+  background-color: transparent; /*  для визначення кольору фону */
   font-weight: 400;
   font-size: 12px;
   line-height: 24px;
   display: flex;
   align-items: center;
   letter-spacing: 0.04em;
-  color: #FFFFFF;
-  border: 1px solid #FFFFFF;
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-border-radius: 4px;
-padding-left: 16px;
-padding-top: 8px;
-padding-bottom: 8px;
-
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  padding-left: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  line-height: 1.5; /*  для визначення простору між рядками */
 }
-.footer-form-subscribe-input::placeholder{
-  color: #FFFFFF;
+.footer-form-subscribe-input::placeholder {
+  color: #ffffff;
 }
 
 .footer-button-subscribe {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-weight: 500;
-	line-height: 1.5;
-	letter-spacing: 0.04em;
-	color: #FFFFFF;
-	background-color: var(--iris-color);
-	padding: 8px 24px;
-	min-width: 165px;
-	height: 40px;
-	border-radius: 4px;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  background-color: var(--iris-color);
+  padding: 8px 24px;
+  min-width: 165px;
+  height: 40px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
-  margin-left: 24px;
+  border: none;
 }
-.footer-button-icon{
+.footer-button-icon {
   margin-left: 16px;
-  fill: #FFFFFF;
-
+  fill: #ffffff;
 }
-
-
-
-
-
 
 /* //////////////////////////////////////Portfolio //////////////////////////////////////////*/
 
@@ -780,11 +765,6 @@ padding-bottom: 8px;
   transform: translateY(0%);
 }
 
-
-
-
-
-
 /* /////////////////////////////////////////      MODAL-WINDOW        //////////////////////// */
 .back-drop {
   position: fixed; /* вирізається зі сторінки, позиціонується від вью порта */
@@ -861,142 +841,144 @@ padding-bottom: 8px;
 } /*Зміна кольору іконки при наведенні на кнопку */
 
 /* /////////////////form/////////////// */
-.subtitle-form{
-text-align: center;
-letter-spacing: 0.02em;
-font-weight: 500;
-font-size: 16px;
-line-height: 24px;
-color: var(--navy-blue-color);
-margin-bottom: 16px;
+.subtitle-form {
+  text-align: center;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--navy-blue-color);
+  margin-bottom: 16px;
 }
 
-.contact-form-wrapper{
+.contact-form-wrapper {
   margin-bottom: 8px;
 }
 
-.contact-form-field-wrapper{
+.contact-form-field-wrapper {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  color:var(--light-slate-color);
+  color: var(--light-slate-color);
   display: block;
   margin-bottom: 4px;
 }
 
-.contact-form-wrapper-for-input{
+.contact-form-wrapper-for-input {
   position: relative;
 }
 
-.contact-form-input{
+.contact-form-input {
   width: 100%;
   height: 40px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  background-color: transparent;/*  задає прозорий колір фону для елемента  */
+  background-color: transparent; /*  задає прозорий колір фону для елемента  */
   padding-left: 38px;
-  outline: transparent;/*  задає прозорий колір для контуру елемента */
+  outline: transparent; /*  задає прозорий колір для контуру елемента */
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* для плавної зміни кольору рамки */
 }
 
-.contact-form-input:focus{
-  border-color: #4D5AE5;
+.contact-form-input:focus {
+  border-color: #4d5ae5;
 }
 
-.contact-form-icon{
+.contact-form-icon {
   position: absolute;
-  left: 16px;/* для встановлення відстані між лівим краєм елемента і лівим краєм його батьківського елемента (contact-form-wrapper-for-input, nfr zr e ymjuj   position: relative; ) */
+  left: 16px; /* для встановлення відстані між лівим краєм елемента і лівим краєм його батьківського елемента (contact-form-wrapper-for-input, nfr zr e ymjuj   position: relative; ) */
   top: 50%; /* для зміщення елемента до верхньої межі контейнера */
   transform: translateY(-50%); /* для центрування елемента по вертикалі */
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);/*  дозволяє задавати анімаційний ефект для зміни значень властивостей стилю */
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); /*  дозволяє задавати анімаційний ефект для зміни значень властивостей стилю */
 }
-
-
 
 /* Кажемо що при фокусі на input, У його сусіда svg(.contact-form-icon)змінюється кольор   */
-.contact-form-input:focus + .contact-form-icon{
-  fill: #4D5AE5; /* для зміни кольору іконки при кліку на input (для цього потрібно прибрати властивість fill у спрайті для іконки) */
+.contact-form-input:focus + .contact-form-icon {
+  fill: #4d5ae5; /* для зміни кольору іконки при кліку на input (для цього потрібно прибрати властивість fill у спрайті для іконки) */
 }
 
-.contact-form-wrapper-comment{
-  margin-bottom: 16px
+.contact-form-wrapper-comment {
+  margin-bottom: 16px;
 }
 
-.contact-form-comment{
+.contact-form-comment {
   width: 100%; /* що встановлює ширину елемента, яка займає повну ширину його батьківського елемента */
   height: 120px;
-  font-size: 12px; 
+  font-size: 12px;
   line-height: 1.17;
-  letter-spacing: 0.04em; 
+  letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4); /* для визначення кольору тексту */
   border: 1px solid rgba(46, 47, 66, 0.2); /* дозволяє задати стиль, ширину та колір межі навколо елемента */
   border-radius: 4px;
   background-color: transparent; /* що встановлює колір фону елемента */
   padding: 8px 16px;
   outline: transparent; /* для встановлення стилю контуру для елемента */
-  resize: none;/*  для заборони зміни розміру елемента */
+  resize: none; /*  для заборони зміни розміру елемента */
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* що дозволяє задавати анімаційний ефект для зміни значень властивостей стилю */
 }
 .contact-form-comment::placeholder {
-	color: rgba(46, 47, 66, 0.4);
+  color: rgba(46, 47, 66, 0.4);
 }
 
-.contact-form-comment:focus{
-  border-color: #4D5AE5;
+.contact-form-comment:focus {
+  border-color: #4d5ae5;
 }
-.contact-form-wrapper-checkbox{
+.contact-form-wrapper-checkbox {
   margin-bottom: 24px;
 }
 
-.contact-form-label-checkbox{
+.contact-form-label-checkbox {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--light-slate-color);
 }
 
-.contact-form-own-checkbox{
+.contact-form-own-checkbox {
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  display: inline-flex; 
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   fill: transparent;
 }
 
-.contact-form-chackbox-input:checked + .contact-form-label-checkbox .contact-form-own-checkbox{
+.contact-form-chackbox-input:checked
+  + .contact-form-label-checkbox
+  .contact-form-own-checkbox {
   background-color: var(--ocean-color);
   border: none;
   fill: var(--white-color);
 }
-.link-privacy{
+.link-privacy {
   font-weight: 400;
-font-size: 12px;
-line-height: 16px;
-letter-spacing: 0.04em;
-text-decoration-line: underline;
-color: var(--iris-color);
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  text-decoration-line: underline;
+  color: var(--iris-color);
 }
 
-.modal-button-send{
-min-width: 169px;
-height: 56px;
-background: #4D5AE5;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-border-radius: 4px;
-color: #ffffff;
-font-weight: 500;
-font-size: 16px;
-line-height: 24px;
-align-items: center;
-text-align: center;
-letter-spacing: 0.04em;
-cursor: pointer;
-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-display: block;
-margin: 0 auto;
-border: none;
+.modal-button-send {
+  min-width: 169px;
+  height: 56px;
+  background: #4d5ae5;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+  margin: 0 auto;
+  border: none;
 }
